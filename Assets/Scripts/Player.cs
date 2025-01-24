@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public EnergyBar energyBar { get; private set; }
 
     [SerializeField] float LeftRightSpeed = 2f;
-    [SerializeField] int boost = 2;
+    [SerializeField] int boost = 10;
 
     private void Start()
     {
