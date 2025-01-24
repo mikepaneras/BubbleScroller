@@ -45,4 +45,13 @@ public class EnergyBar : MonoBehaviour
         barFillImage.fillAmount =  currentEnergy / TOTAL_ENERGY;
     }
     public float GetCurrentEnergy() => currentEnergy;
+    public void DecreaseEnergy(int amount)
+    {
+        currentEnergy -= amount;
+
+        if( currentEnergy < 0)
+        {
+            currentEnergy = 0;
+        }
+    }
 }
