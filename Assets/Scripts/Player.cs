@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
+    bool isAlive = true;
     public EnergyBar energyBar { get; private set; }
 
     [SerializeField] float LeftRightSpeed = 2f;
@@ -46,5 +47,12 @@ public class Player : MonoBehaviour
         {
             return;
         }
+    }
+
+    public bool getAlive() => isAlive;
+
+    public void Die()
+    {
+        isAlive = false;
     }
 }
