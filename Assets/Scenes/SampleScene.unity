@@ -871,10 +871,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5935892142225883008, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6428955827387853834, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
       propertyPath: m_Name
       value: Player
