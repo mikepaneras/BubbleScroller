@@ -1,15 +1,26 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    int livesAmount = 0;
     bool isAlive = true;
-    [SerializeField] float speed = 2f;
+    bool isInvincible = false;
     float smoothedSpeed = 0;
+    Vector3 target;
+    Rigidbody2D rb;
+
     [SerializeField] float speedFalloff = 2f;
     [SerializeField] float rotationSpeed = 1f;
     [SerializeField] Vector2 rotationBounds;
     [SerializeField] float sesitivity = 2f;
-    Vector3 target;
+    [SerializeField] float speed = 2f;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
