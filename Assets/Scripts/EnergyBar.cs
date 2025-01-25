@@ -54,4 +54,13 @@ public class EnergyBar : MonoBehaviour
             currentEnergy = 0;
         }
     }
+    public void IncreaseEnergy(int amount)
+    {
+        currentEnergy += amount;
+
+        if (currentEnergy > TOTAL_ENERGY)
+        {
+            currentEnergy = TOTAL_ENERGY;
+        }
+    }
 }
