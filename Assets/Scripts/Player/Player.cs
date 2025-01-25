@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Finish" && !isInvincible)
+        if(collision.collider.tag == "Death" && !isInvincible)
         {
             if (livesAmount == 0) Die();
             else

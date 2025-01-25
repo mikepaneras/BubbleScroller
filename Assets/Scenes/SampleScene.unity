@@ -432,9 +432,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 620975810}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: MapLevels
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -674,9 +674,9 @@ GameObject:
   - component: {fileID: 992419261}
   - component: {fileID: 992419260}
   - component: {fileID: 992419262}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,9 +1114,9 @@ GameObject:
   - component: {fileID: 1297735610}
   - component: {fileID: 1297735612}
   - component: {fileID: 1297735611}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (4)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1472,9 +1472,9 @@ GameObject:
   - component: {fileID: 1483228921}
   - component: {fileID: 1483228923}
   - component: {fileID: 1483228922}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2052,9 +2052,9 @@ GameObject:
   - component: {fileID: 2130788326}
   - component: {fileID: 2130788328}
   - component: {fileID: 2130788327}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

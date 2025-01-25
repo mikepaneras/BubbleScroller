@@ -25,7 +25,7 @@ public class GoldenBubble : MonoBehaviour
         if(collision.tag == "Player")
         {
             isAlive = false;
-            Debug.Log("Helloo2");
+            Debug.Log("Gold Bubble Get!");
         }
     }
 

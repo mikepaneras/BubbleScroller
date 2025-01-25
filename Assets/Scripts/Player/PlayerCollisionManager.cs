@@ -10,13 +10,19 @@ public class PlayerCollisionManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle") && player.getLives() == 0)
+        if (collision.CompareTag("Death"))
         {
-            player.Die();
-        }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle") && player.getLives() != 0)
-        {
-            player.removeLife();
+            if (player.getLives() == 0)
+            {
+                player.Die();
+            }
+            else
+            {
+                player.removeLife();
+
+                // Move player to center
+                player.transform.position -= new Vector3(player.transform.position.x, 0,0);
+            }
         }
         else if (collision.gameObject.tag == "GoldenBubble")
         {

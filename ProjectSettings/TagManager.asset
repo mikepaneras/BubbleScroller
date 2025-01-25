@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GoldenBubble
+  - Death
   layers:
   - Default
   - TransparentFX
