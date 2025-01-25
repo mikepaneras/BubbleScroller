@@ -661,9 +661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6788d07c004d949be73b3e272468dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   offset: {x: 0, y: 3}
-  follwSpeed: 1
+  followSpeed: 1
 --- !u!1 &992419259
 GameObject:
   m_ObjectHideFlags: 0

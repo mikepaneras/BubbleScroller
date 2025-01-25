@@ -111,10 +111,6 @@ public class Player : MonoBehaviour
         livesAmount--;
     }
 
-    public void Die()
-    {
-        isAlive = false;
-    }
     public bool getAlive() => isAlive;
     public void Die() => isAlive = false;
 }
