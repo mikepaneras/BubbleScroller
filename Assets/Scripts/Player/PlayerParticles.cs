@@ -15,7 +15,7 @@ public class PlayerParticles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             // Patricles on movement
                     
@@ -23,7 +23,7 @@ public class PlayerParticles : MonoBehaviour
             
    
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             // Stop making particles
             BubblesParticleSystem.Stop();
