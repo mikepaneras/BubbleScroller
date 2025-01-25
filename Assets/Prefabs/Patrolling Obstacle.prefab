@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1878073122419253057}
   - component: {fileID: 4228401555965227690}
   - component: {fileID: 9187373951058508616}
-  - component: {fileID: 186330703271437765}
+  - component: {fileID: 4276268556754820687}
   m_Layer: 6
   m_Name: Patrolling Obstacle
   m_TagString: Death
@@ -106,8 +106,8 @@ MonoBehaviour:
   resumeDelay: 0.5
   isLinear: 0
   withBacktrack: 0
---- !u!58 &186330703271437765
-CircleCollider2D:
+--- !u!70 &4276268556754820687
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,6 +138,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0050000027, y: -0.0049997717}
-  serializedVersion: 2
-  m_Radius: 0.11
+  m_Offset: {x: -0.03125, y: -0.03303361}
+  m_Size: {x: 1.125, y: 1.4784546}
+  m_Direction: 0
