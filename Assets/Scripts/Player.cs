@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     bool isAlive = true;
     bool isBoosting = false;
-    public EnergyBar energyBar { get; private set; }
+    //public EnergyBar energyBar { get; private set; }
 
     [SerializeField] float normalSpeed = 2f;
     [SerializeField] float boostSpeed = 1.5f;
@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        energyBar = FindObjectOfType<EnergyBar>();
     }
     void Update()
     {
@@ -45,20 +44,12 @@ public class Player : MonoBehaviour
 
     void Boost()
     {
-        if (energyBar.GetCurrentEnergy() != 0)
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                isBoosting = true;
-                rb.AddForce(Vector2.up * boost, ForceMode2D.Force);
-            }
-            else isBoosting = false;
+            isBoosting = true;
+            rb.AddForce(Vector2.up * boost, ForceMode2D.Force);
         }
-        else
-        {
-            isBoosting = false;
-            return;
-        }
+        else isBoosting = false;
     }
 
     public bool getAlive() => isAlive;
