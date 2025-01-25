@@ -79,6 +79,7 @@ public class Player : MonoBehaviour
         if(collision.tag == "GoldenBubble")
         {
             //Add invicibility logic
+            Debug.Log("---111---");
             livesAmount++;
         }
     }
@@ -89,6 +90,18 @@ public class Player : MonoBehaviour
         isInvincible = false;
     }
     public bool getAlive() => isAlive;
+
+    public int getLives() => livesAmount;
+
+    public void addLife()
+    {
+        livesAmount++;
+    }
+
+    public void removeLife()
+    {
+        livesAmount--;
+    }
 
     public void Die()
     {
