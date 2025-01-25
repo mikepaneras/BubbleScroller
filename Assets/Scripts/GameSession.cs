@@ -17,7 +17,6 @@ public class GameSession : MonoBehaviour
     {
         if (!player.getAlive())
         {
-            player.gameObject.SetActive(false);
             deathScreen.gameObject.SetActive(true);
         }
     }
