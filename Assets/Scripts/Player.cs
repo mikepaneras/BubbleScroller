@@ -1,55 +1,43 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rb;
     bool isAlive = true;
-    bool isBoosting = false;
-    //public EnergyBar energyBar { get; private set; }
+    [SerializeField] float speed = 2f;
+    [SerializeField] float rotationSpeed = 1f;
+    [SerializeField] Vector2 rotationBounds;
+    [SerializeField] float sesitivity = 2f;
+    Vector3 target;
 
-    [SerializeField] float normalSpeed = 2f;
-    [SerializeField] float boostSpeed = 1.5f;
-    [SerializeField] int boost = 10;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
     void Update()
     {
-        LeftRight();
-        Boost();
-        CheckBounds();
+        Rotate();
+
+        if (!isAlive) return;
+        
+        // Move up.
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) target = transform.position + transform.up;
+        transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
     }
 
-    private void CheckBounds()
+    void Rotate()
     {
-        //if (transform.position.y < Camera.main.ScreenToWorldPoint(new Vector3(0,0,0)).y)
-    }
+        float direction = Input.GetAxis("Mouse X") * sesitivity;
+        if (Input.GetKey(KeyCode.A)) direction = -1f;
+        if (Input.GetKey(KeyCode.D)) direction = 1f;
 
-    void LeftRight()
-    {
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.transform.position += (rb.transform.right * Time.deltaTime * -(isBoosting ? boostSpeed : normalSpeed));
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            rb.transform.position += (rb.transform.right * Time.deltaTime * (isBoosting ? boostSpeed : normalSpeed));
-        }
-    }
+        float rotation = transform.eulerAngles.z;
+        if (rotation > 180f) rotation -= 360f;
 
-    void Boost()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            isBoosting = true;
-            rb.AddForce(Vector2.up * boost, ForceMode2D.Force);
-        }
-        else isBoosting = false;
+        if (rotation >= rotationBounds.x && rotation <= rotationBounds.y) transform.Rotate(new Vector3(0, 0, direction * rotationSpeed * Time.deltaTime));
+
+        rotation = transform.eulerAngles.z;
+        if (rotation > 180f) rotation -= 360f;
+
+        // Clamp indicator
+        if (rotation <= rotationBounds.x) transform.rotation = Quaternion.Euler(0, 0, rotationBounds.x + 0.01f);
+        if (rotation >= rotationBounds.y) transform.rotation = Quaternion.Euler(0, 0, rotationBounds.y - 0.01f);
     }
 
     public bool getAlive() => isAlive;
