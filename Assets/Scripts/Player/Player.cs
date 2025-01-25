@@ -51,6 +51,33 @@ public class Player : MonoBehaviour
         if (rotation >= rotationBounds.y) transform.rotation = Quaternion.Euler(0, 0, rotationBounds.y - 0.01f);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Finish" && !isInvincible)
+        {
+            if (livesAmount == 0) Die();
+            else
+            {
+                livesAmount--;
+                StartCoroutine(InvicibilityPower());
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "GoldenBubble")
+        {
+            //Add invicibility logic
+            livesAmount++;
+        }
+    }
+    IEnumerator InvicibilityPower()
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(0.5f);
+        isInvincible = false;
+    }
     public bool getAlive() => isAlive;
 
     public void Die()
