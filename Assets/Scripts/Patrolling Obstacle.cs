@@ -12,6 +12,8 @@ public class PatrollingObstacle : MonoBehaviour
 
     [Header("Linear Options")]
     [SerializeField] bool isLinear = false;   // Whether patrol is linear or circular
+    [SerializeField] bool withBacktrack;
+    bool backwards = false;
     Vector3 startingPoint;                    // The starting position of the object
     bool toStarting = false;                  // Whether the object is returning to the starting position
     int selectedPatrolPoint = 0;              // Index of the current patrol point
@@ -60,7 +62,7 @@ public class PatrollingObstacle : MonoBehaviour
         }
         else // Linear patrol
         {
-            if (toStarting)
+            if (toStarting && !withBacktrack)
             {
                 return startingPoint; // Go back to the starting point
             }
@@ -79,6 +81,26 @@ public class PatrollingObstacle : MonoBehaviour
         }
         else // Linear patrol
         {
+            if(withBacktrack)
+            {
+                if (!backwards)
+                {
+                    selectedPatrolPoint++;
+                    if(selectedPatrolPoint == patrolPoints.Length - 1)
+                    {
+                        backwards = true;
+                    }
+                }
+                else
+                {
+                    selectedPatrolPoint--;
+                    if (selectedPatrolPoint == 0)
+                    {
+                        backwards = false;
+                    }
+                }
+                return;
+            }
             if (toStarting)
             {
                 // If currently heading to the starting point, toggle `toStarting` to false
