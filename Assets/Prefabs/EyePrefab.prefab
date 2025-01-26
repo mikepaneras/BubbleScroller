@@ -181,7 +181,7 @@ MonoBehaviour:
   areaOfEffect: {fileID: 6581889631993930227}
   animator: {fileID: -7816339001412549583}
   eyeOpenSpeed: 0.2
-  eyeCloseSpeed: 0.2
+  holdTime: 2
 --- !u!95 &-7816339001412549583
 Animator:
   serializedVersion: 5
