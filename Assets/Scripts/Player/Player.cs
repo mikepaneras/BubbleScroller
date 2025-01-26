@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         if (!isAlive) return;
 
         Rotate();
+        transform.position -= Vector3.up * Time.deltaTime;
 
         // Move up.
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
