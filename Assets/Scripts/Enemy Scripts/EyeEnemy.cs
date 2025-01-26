@@ -8,18 +8,17 @@ public class EyeEnemy : MonoBehaviour
     [SerializeField] Collider2D areaOfEffect;
     [SerializeField] Animator animator;
     [SerializeField] float eyeOpenSpeed = 0.2f;
-    [SerializeField] float eyeCloseSpeed = 0.2f;
+    [SerializeField] float holdTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
         areaOfEffect.tag = "Death";
-        animator.SetFloat("closing", eyeCloseSpeed);
-        animator.SetFloat("opening", eyeOpenSpeed);
+
+        CheckEyeState();
     }
 
     private void Update()
     {
-        CheckEyeState();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,12 +28,14 @@ public class EyeEnemy : MonoBehaviour
 
     void CheckEyeState()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("closing") != true){
-            areaOfEffect.gameObject.SetActive(false);
-        }
-        else
+        StartCoroutine(HoldTimeCoroutine());
+    }
+    IEnumerator HoldTimeCoroutine()
+    {
+        while (true)
         {
-            areaOfEffect.gameObject.SetActive(true);
+            yield return new WaitForSeconds(holdTime);
+            animator.SetTrigger("state");
         }
     }
 
