@@ -17,9 +17,12 @@ public class PatrollingObstacle : MonoBehaviour
     Vector3 startingPoint;                    // The starting position of the object
     bool toStarting = false;                  // Whether the object is returning to the starting position
     int selectedPatrolPoint = 0;              // Index of the current patrol point
+    AudioSource audioSource;
+    [SerializeField] AudioClip noise;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         // Save the starting position of the object
         startingPoint = transform.position;
 
@@ -35,7 +38,7 @@ public class PatrollingObstacle : MonoBehaviour
             currentResumeDelay -= Time.deltaTime;
             return;
         }
-
+        audioSource.PlayOneShot(noise);
         // Determine the current target position
         Vector3 target = GetCurrentTarget();
 

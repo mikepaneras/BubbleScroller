@@ -9,11 +9,14 @@ public class EyeEnemy : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float eyeOpenSpeed = 0.2f;
     [SerializeField] float holdTime = 1f;
+    AudioSource audioSource;
+    [SerializeField] AudioClip attackSound;
     // Start is called before the first frame update
     void Start()
     {
         areaOfEffect.tag = "Death";
-
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.spatialBlend = 1;
         CheckEyeState();
     }
 
@@ -40,7 +43,11 @@ public class EyeEnemy : MonoBehaviour
     }
 
     #region AnimationEvents
-    public void EnableCollider() => areaOfEffect.gameObject.SetActive(true);
+    public void EnableCollider()
+    {
+        audioSource.PlayOneShot(attackSound);
+        areaOfEffect.gameObject.SetActive(true);
+    }
     public void DisableCollider() => areaOfEffect.gameObject.SetActive(false);
     #endregion
 }

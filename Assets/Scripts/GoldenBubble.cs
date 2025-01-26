@@ -5,6 +5,9 @@ using UnityEngine;
 public class GoldenBubble : MonoBehaviour
 {
     CircleCollider2D circleCollider2D;
+    AudioSource audioSource;
+    [SerializeField] AudioClip sound;
+    Player player;
 
     bool isAlive;
 
@@ -13,6 +16,8 @@ public class GoldenBubble : MonoBehaviour
     {
         circleCollider2D = GetComponent<CircleCollider2D>();
         isAlive = true;
+        player = FindObjectOfType<Player>();
+        audioSource = player.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -26,6 +31,7 @@ public class GoldenBubble : MonoBehaviour
         {
             isAlive = false;
             Debug.Log("Gold Bubble Get!");
+            audioSource.PlayOneShot(sound);
         }
     }
 
