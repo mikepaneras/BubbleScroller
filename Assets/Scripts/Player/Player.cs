@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Animator animator;
 
     int livesAmount = 0;
     bool isAlive = true;
     bool isInvincible = false;
     float smoothedSpeed = 0;
     Vector3 target;
-    Rigidbody2D rb;
-    public Animator animator;
 
     [SerializeField] float speedFalloff = 2f;
     [SerializeField] float rotationSpeed = 1f;
@@ -20,17 +19,12 @@ public class Player : MonoBehaviour
     [SerializeField] float speed = 2f;
     [SerializeField] float invincibility = 2f;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     void Update()
     {
         if (!isAlive) return;
 
         Rotate();
-        transform.position -= Vector3.up * Time.deltaTime;
+        if (transform.position.y > -5) transform.position -= Vector3.up * Time.deltaTime;
 
         // Move up.
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
@@ -53,8 +47,8 @@ public class Player : MonoBehaviour
     {
         // Get input
         float direction = Input.GetAxis("Mouse X") * sesitivity;
-        if (Input.GetKey(KeyCode.A)) direction = -1f;
-        if (Input.GetKey(KeyCode.D)) direction = 1f;
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) direction = -1f;
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) direction = 1f;
 
         // format value for calculations
         float rotation = transform.eulerAngles.z;
@@ -100,4 +94,10 @@ public class Player : MonoBehaviour
 
     public bool getAlive() => isAlive;
     public void Die() => isAlive = false;
+
+    public void Revive()
+    {
+        isAlive = true;
+        target = transform.position;
+    }
 }
