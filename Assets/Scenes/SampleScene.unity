@@ -1680,9 +1680,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breathing Shadow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6366382362960753930, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
+      propertyPath: maxScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8870792
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4661,9 +4665,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breathing Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 6366382362960753930, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
+      propertyPath: maxScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5629208
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5138,9 +5146,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breathing Shadow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6366382362960753930, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
+      propertyPath: maxScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0270796
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7682678875850397264, guid: 297a9c57928539f4db95d012b452bde2, type: 3}
       propertyPath: m_LocalPosition.y
