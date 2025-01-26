@@ -2522,6 +2522,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8837734972915416621, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837734972915416621, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9199223931479464696, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
       propertyPath: m_Sprite
       value: 
