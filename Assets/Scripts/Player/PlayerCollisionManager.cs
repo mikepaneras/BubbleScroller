@@ -17,7 +17,7 @@ public class PlayerCollisionManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Death") && !hasCollided)
+        if (collision.CompareTag("Death") && !hasCollided && !player.getInvincibilityStatus())
         {
             hasCollided = true;
             if (player.getLives() == 0)
@@ -30,6 +30,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 // Move player to center
                 player.transform.position -= new Vector3(player.transform.position.x, 0, 0);
                 player.transform.rotation = Quaternion.identity;
+                StartCoroutine(player.InvicibilityPower());
             }
         }
         else if (collision.gameObject.tag == "GoldenBubble")

@@ -11,12 +11,14 @@ public class Player : MonoBehaviour
     float smoothedSpeed = 0;
     Vector3 target;
     Rigidbody2D rb;
+    public Animator animator;
 
     [SerializeField] float speedFalloff = 2f;
     [SerializeField] float rotationSpeed = 1f;
     [SerializeField] Vector2 rotationBounds;
     [SerializeField] float sesitivity = 2f;
     [SerializeField] float speed = 2f;
+    [SerializeField] float invincibility = 2f;
 
     private void Start()
     {
@@ -69,11 +71,18 @@ public class Player : MonoBehaviour
         if (rotation >= rotationBounds.y) transform.rotation = Quaternion.Euler(0, 0, rotationBounds.y - 0.01f);
     }
 
-    IEnumerator InvicibilityPower()
+    public IEnumerator InvicibilityPower()
     {
         isInvincible = true;
-        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isInvincible", true);
+        yield return new WaitForSeconds(invincibility);
+        animator.SetBool("isInvincible", false);
         isInvincible = false;
+    }
+
+    public bool getInvincibilityStatus()
+    {
+        return isInvincible;
     }
 
     public int getLives() => livesAmount;
