@@ -315,12 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b164211fd79b444e86cc80851864fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2437744389447773316}
   speedFalloff: 4
   rotationSpeed: 180
-  rotationBounds: {x: -60, y: 60}
+  rotationBounds: {x: -70, y: 70}
   sesitivity: 2
   speed: 5
-  invincibility: 1
+  invincibility: 1.5
 --- !u!114 &3227914487046185731
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,10 +13,10 @@ public class Player : MonoBehaviour
     Vector3 target;
 
     [SerializeField] float speedFalloff = 2f;
-    [SerializeField] float rotationSpeed = 1f;
+    public float rotationSpeed = 1f;
     [SerializeField] Vector2 rotationBounds;
     [SerializeField] float sesitivity = 2f;
-    [SerializeField] float speed = 2f;
+    public float speed = 2f;
     [SerializeField] float invincibility = 2f;
 
     void Update()
@@ -93,7 +93,11 @@ public class Player : MonoBehaviour
     }
 
     public bool getAlive() => isAlive;
-    public void Die() => isAlive = false;
+    public void Die()
+    {
+        isAlive = false;
+        GetComponent<AudioSource>().Play();
+    }
 
     public void Revive()
     {

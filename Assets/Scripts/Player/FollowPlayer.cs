@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
     public bool reset = false;
     Player playerController;
     [SerializeField] Vector2 offset;
-    [SerializeField] float followSpeed;
+    public float followSpeed;
 
     GameObject resetTarget;
 
