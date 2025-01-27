@@ -12,10 +12,14 @@ public class GameSession : MonoBehaviour
     public Transform[] bubbleLocations;
     public GoldenBubble GoldenBubblePrefab;
     public GoldenBubble[] GoldenBubbles;
-
-    bool goldenBubblesRespawned = false;
     
-    // Update is called once per frame
+    bool goldenBubblesRespawned = false;
+
+    private void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
         ChcekAlive();
@@ -68,5 +72,5 @@ public class GameSession : MonoBehaviour
         {
             livesAmounts.SetText(player.getLives().ToString());
         }
-    }
+    } 
 }
