@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public float speed = 2f;
     [SerializeField] float invincibility = 2f;
     [SerializeField] Animator animatorPlayer;
+    [SerializeField] AudioClip popSound;
 
     private void Start()
     {
@@ -111,6 +112,7 @@ public class Player : MonoBehaviour
         GetComponent<AudioSource>().Play();
         colliderPlayer.enabled = false;
         animator.SetTrigger("Death");
+        GetComponent<AudioSource>().PlayOneShot(popSound);
     }
 
     public void Revive()
