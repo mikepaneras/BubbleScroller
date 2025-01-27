@@ -6486,6 +6486,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2279513403272552127, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3883771548740803613, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
       propertyPath: m_Name
       value: Level10
@@ -6529,6 +6533,18 @@ PrefabInstance:
     - target: {fileID: 5730529645700239494, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575748262144373433, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575748262144373433, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575748262144373433, guid: b7b01cf8dafbc2743a59082d2a123b20, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
