@@ -8,6 +8,7 @@ public class PlayerParticles : MonoBehaviour
     public AudioSource audioSource;
 
     Player player;
+    public Win winTrigger;
 
     #region UNITY METHODS
     void Start()
@@ -28,7 +29,7 @@ public class PlayerParticles : MonoBehaviour
             audioSource.Play();
             BubblesParticleSystem.Play();
         }
-        else if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        else if ((Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0)) && !winTrigger.finished)
         {
             // Stop making particles
             BubblesParticleSystem.Stop();

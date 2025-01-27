@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c75f97659add94da3a74f491d8de31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 04bde2da8543bc248a31d630ec872b9d, type: 3}
+  sound: {fileID: 8300000, guid: b05c2c1a21ec77c4184fa42fc6d9de5c, type: 3}
 --- !u!58 &8718587606194980801
 CircleCollider2D:
   m_ObjectHideFlags: 0
