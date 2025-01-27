@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: e24971b65ad01a14d8a621b66d7681e5
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: air_idle_animation_Clip
+    second: {fileID: 7400000, guid: e80540f7a3c6b5c4b87669c252424caa, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638735044523499131
+  platformSettingsDirtyTick: 638736117831347347
   textureAssetName: 
   singleSpriteImportData:
   - name: 
