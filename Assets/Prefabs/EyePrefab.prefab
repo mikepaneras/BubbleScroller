@@ -181,7 +181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaOfEffect: {fileID: 6581889631993930227}
   animator: {fileID: -7816339001412549583}
-  eyeOpenSpeed: 0.2
   holdTime: 2.5
   attackSound: {fileID: 8300000, guid: 0da5f684a4a121e479dc636ae51ef989, type: 3}
 --- !u!95 &-7816339001412549583
@@ -225,8 +224,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 10
+  MinDistance: 0.3
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

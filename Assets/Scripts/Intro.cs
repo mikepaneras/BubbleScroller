@@ -17,6 +17,7 @@ public class Intro : MonoBehaviour
     public TextMeshProUGUI textoutro;
     void Start()
     {
+        image.gameObject.SetActive(true);
         FadeIN();
         Invoke("FadeOut", 6f);
     }
