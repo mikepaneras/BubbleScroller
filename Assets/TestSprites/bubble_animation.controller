@@ -135,7 +135,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: pop_animation_Clip
-  m_Speed: 1.5
+  m_Speed: 1.75
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2358975453254554307}
@@ -258,7 +258,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: pop_animation_Clip 0
-  m_Speed: -1.5
+  m_Speed: -1.75
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: -4517318258256880624}
