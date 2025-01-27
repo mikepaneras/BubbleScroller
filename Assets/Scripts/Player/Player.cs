@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] float sesitivity = 2f;
     public float speed = 2f;
     [SerializeField] float invincibility = 2f;
+    [SerializeField] Animator animatorPlayer;
 
     private void Start()
     {
@@ -104,6 +105,7 @@ public class Player : MonoBehaviour
         isAlive = false;
         GetComponent<AudioSource>().Play();
         colliderPlayer.enabled = false;
+        animator.SetTrigger("Death");
         
     }
 

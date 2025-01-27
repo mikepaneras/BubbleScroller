@@ -12,8 +12,6 @@ public class GameSession : MonoBehaviour
     public Transform[] bubbleLocations;
     public GoldenBubble GoldenBubblePrefab;
     public GoldenBubble[] GoldenBubbles;
-    
-    bool goldenBubblesRespawned = false;
 
     private void Start()
     {

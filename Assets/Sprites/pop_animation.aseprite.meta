@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 712f5eafaeea0764aa08b1da0f917688
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: pop_animation_Clip
+    second: {fileID: 7400000, guid: 70dab1daf330b4d4789774a217297480, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -75,7 +80,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -88,7 +93,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638736097168422986
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +128,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.4090909}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +148,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 101}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.33333334}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +168,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 37}
   - name: Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.33333334}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +188,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 69}
   - name: Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.32000002}
+    pivot: {x: 0.5, y: 0.48000002}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +208,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Frame_4
     originalName: 
-    pivot: {x: 0.48000002, y: -0.3478261}
+    pivot: {x: 0.48000002, y: 0.5217391}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +228,7 @@ ScriptedImporter:
     uvTransform: {x: 36, y: 4}
   - name: Frame_5
     originalName: 
-    pivot: {x: 0.48000002, y: -0.44444448}
+    pivot: {x: 0.48000002, y: 0.66666675}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +248,7 @@ ScriptedImporter:
     uvTransform: {x: 36, y: 35}
   - name: Frame_6
     originalName: 
-    pivot: {x: 0.52, y: -0.47058827}
+    pivot: {x: 0.52, y: 0.70588243}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +268,7 @@ ScriptedImporter:
     uvTransform: {x: 36, y: 61}
   - name: Frame_7
     originalName: 
-    pivot: {x: 0.6666667, y: -0.5625}
+    pivot: {x: 0.6666667, y: 0.6875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +288,7 @@ ScriptedImporter:
     uvTransform: {x: 36, y: 86}
   - name: Frame_8
     originalName: 
-    pivot: {x: 0.44444445, y: -0.6666667}
+    pivot: {x: 0.44444445, y: 0.6666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -401,6 +406,30 @@ ScriptedImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
