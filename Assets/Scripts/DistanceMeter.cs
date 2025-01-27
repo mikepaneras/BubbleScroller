@@ -26,7 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
         // Display the message on screen...
         counterDistance.text = $"Peak Journey:  { ((int)counter)}";
 
-        if (bubble.transform.position.y < 0)
+        if (counter < 0)
         {
             counterDistance.enabled = false;
         }
