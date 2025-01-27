@@ -29,9 +29,9 @@ public class GoldenBubble : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            audioSource.PlayOneShot(sound);
             isAlive = false;
             Debug.Log("Gold Bubble Get!");
-            audioSource.PlayOneShot(sound);
         }
     }
 
