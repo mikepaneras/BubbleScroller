@@ -25,6 +25,11 @@ public class GoldenBubble : MonoBehaviour
         CheckAlive();
     }
 
+    public bool getAlive()
+    {
+        return isAlive;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")

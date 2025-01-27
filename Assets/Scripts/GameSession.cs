@@ -9,6 +9,11 @@ public class GameSession : MonoBehaviour
     public GameObject deathScreen;
     public TextMeshProUGUI livesAmounts;
     public FollowPlayer cameraController;
+    public Transform[] bubbleLocations;
+    public GoldenBubble GoldenBubblePrefab;
+    public GoldenBubble[] GoldenBubbles;
+
+    bool goldenBubblesRespawned = false;
     
     // Update is called once per frame
     void Update()
@@ -22,6 +27,14 @@ public class GameSession : MonoBehaviour
         if (!player.getAlive())
         {
             ResetAnimation();
+            int i = 0;
+            foreach(GoldenBubble b in GoldenBubbles){
+                if (!b.getAlive())
+                {
+                    GoldenBubbles[i] = Instantiate(GoldenBubblePrefab, bubbleLocations[i]);
+                }
+                i++;
+            }
         }
     }
 
