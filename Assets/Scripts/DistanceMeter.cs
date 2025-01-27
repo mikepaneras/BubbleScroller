@@ -24,7 +24,24 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         // Display the message on screen...
-        counterDistance.text = $"Longest Journey  { ((int)counter)}";
+        counterDistance.text = $"Peak Journey:  { ((int)counter)}";
+
+        if (bubble.transform.position.y < 0)
+        {
+            counterDistance.enabled = false;
+        }
+        else
+        {
+            counterDistance.enabled = true;
+        }
+
     }
     // Max distance is 390m
+
+    public void SetTransparency(float alpha)
+    {
+        Color color = counterDistance.color;
+        color.a = alpha;
+        counterDistance.color = color;
+    }
 }
