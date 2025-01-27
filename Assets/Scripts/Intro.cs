@@ -15,6 +15,9 @@ public class Intro : MonoBehaviour
 
     public Image outroimage;
     public TextMeshProUGUI textoutro;
+
+    public Player player;
+
     void Start()
     {
         image.gameObject.SetActive(true);
@@ -48,6 +51,8 @@ public class Intro : MonoBehaviour
             if(delay > 0) { delay -= Time.deltaTime; return; }
             image.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
             textMeshPro.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
+
+            player.started = true;
         }
     }
 }

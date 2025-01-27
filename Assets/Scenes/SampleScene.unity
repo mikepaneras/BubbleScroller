@@ -3432,6 +3432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG Fill
       objectReference: {fileID: 0}
+    - target: {fileID: 4330868261738891589, guid: 65df9faf4d8e7c74e88640bf305293d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7765279354279642356, guid: 65df9faf4d8e7c74e88640bf305293d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.1
@@ -7122,6 +7126,7 @@ MonoBehaviour:
   textMeshPro: {fileID: 1926271137}
   outroimage: {fileID: 603989418}
   textoutro: {fileID: 1430032102}
+  player: {fileID: 1387113143}
 --- !u!1001 &1455597515
 PrefabInstance:
   m_ObjectHideFlags: 0
