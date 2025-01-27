@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Win : MonoBehaviour
     public GameObject cameraFinishTarget;
     public Player player;
     bool finished;
+    [SerializeField] GameObject outro;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +34,6 @@ public class Win : MonoBehaviour
         finished = true;
         cameraController.enabled = false;
         player.enabled = false;
+        outro.SetActive(true);
     }
 }

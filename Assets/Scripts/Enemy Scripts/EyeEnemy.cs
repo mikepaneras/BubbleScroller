@@ -7,7 +7,6 @@ public class EyeEnemy : MonoBehaviour
 {
     [SerializeField] Collider2D areaOfEffect;
     [SerializeField] Animator animator;
-    [SerializeField] float eyeOpenSpeed = 0.2f;
     [SerializeField] float holdTime = 1f;
     AudioSource audioSource;
     [SerializeField] AudioClip attackSound;

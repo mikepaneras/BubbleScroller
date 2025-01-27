@@ -8,6 +8,8 @@ public class Intro : MonoBehaviour
 {
     bool startFade = false;
     bool startIntro = false;
+    float delay = 0f;
+    float fadeSpeed = 0.5f;
     public Image image;
     public TextMeshProUGUI textMeshPro;
 
@@ -15,31 +17,36 @@ public class Intro : MonoBehaviour
     public TextMeshProUGUI textoutro;
     void Start()
     {
+        FadeIN();
         Invoke("FadeOut", 6f);
     }
 
     void FadeOut()
     {
+        startIntro = false;
         startFade = true;
     }
 
     void FadeIN()
     {
+        textMeshPro.color = new Color(1, 1, 1, 0);
         startIntro = true;
+        startFade = false;
     }
 
     void Update()
     {
         if (startFade)
         {
-            image.color -= new Color(0,0,0, Time.deltaTime);
-            textMeshPro.color -= new Color(0, 0, 0, Time.deltaTime);
+            image.color -= new Color(0,0,0, Time.deltaTime * fadeSpeed);
+            textMeshPro.color -= new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
         }
 
         if (startIntro)
         {
-            image.color += new Color(0, 0, 0, Time.deltaTime);
-            textMeshPro.color += new Color(0, 0, 0, Time.deltaTime);
+            if(delay > 0) { delay -= Time.deltaTime; return; }
+            image.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
+            textMeshPro.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
         }
     }
 }
