@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     bool isInvincible = false;
     float smoothedSpeed = 0;
     Vector3 target;
+    CircleCollider2D colliderPlayer;
 
     [SerializeField] float speedFalloff = 2f;
     public float rotationSpeed = 1f;
@@ -18,6 +19,11 @@ public class Player : MonoBehaviour
     [SerializeField] float sesitivity = 2f;
     public float speed = 2f;
     [SerializeField] float invincibility = 2f;
+
+    private void Start()
+    {
+        colliderPlayer = GetComponentInChildren<CircleCollider2D>();
+    }
 
     void Update()
     {
@@ -97,11 +103,14 @@ public class Player : MonoBehaviour
     {
         isAlive = false;
         GetComponent<AudioSource>().Play();
+        colliderPlayer.enabled = false;
+        
     }
 
     public void Revive()
     {
         isAlive = true;
         target = transform.position;
+        colliderPlayer.enabled = true;
     }
 }
