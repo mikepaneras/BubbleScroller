@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     //Assign vars...
     public TextMeshProUGUI counterDistance;
-    public float counter = Mathf.NegativeInfinity;
+    public float counter = 0;
     public GameObject bubble;
 
     

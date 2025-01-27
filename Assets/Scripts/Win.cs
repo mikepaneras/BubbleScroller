@@ -9,8 +9,10 @@ public class Win : MonoBehaviour
     public FollowPlayer cameraController;
     public GameObject cameraFinishTarget;
     public Player player;
-    bool finished;
+    public bool finished;
     [SerializeField] GameObject outro;
+
+    public PlayerParticles playerParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +37,9 @@ public class Win : MonoBehaviour
         cameraController.enabled = false;
         player.enabled = false;
         outro.SetActive(true);
+
+        // Patricles on movement
+        playerParticles.audioSource.Play();
+        playerParticles.BubblesParticleSystem.Play();
     }
 }
