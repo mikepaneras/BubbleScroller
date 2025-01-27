@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool started = true;
+
     public Animator animator;
 
     int livesAmount = 0;
@@ -28,10 +30,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!isAlive) return;
+        if (!started) return;
 
         Rotate();
         if (transform.position.y > -5) transform.position -= Vector3.up * Time.deltaTime;
+
+        if (!isAlive) return;
 
         // Move up.
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))

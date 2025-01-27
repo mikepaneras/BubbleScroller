@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: a7ce9742c2621ce41b2ec59a0fbdd04c
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: shadow_Clip
+    second: {fileID: 7400000, guid: 42d7081e113c77e40a858fc819b1200a, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +102,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638734878587337963
+  platformSettingsDirtyTick: 638736088216200714
   textureAssetName: 
   singleSpriteImportData:
   - name: 

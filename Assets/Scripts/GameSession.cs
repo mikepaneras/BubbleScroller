@@ -42,7 +42,7 @@ public class GameSession : MonoBehaviour
 
     float timer;
     bool resetting = false;
-    float initialPause = 3f; // how long to wait before starting to go back to the bottom. (second)
+    float initialPause = 1f; // how long to wait before starting to go back to the bottom. (second)
 
     void ResetAnimation()
     {
@@ -62,6 +62,8 @@ public class GameSession : MonoBehaviour
         resetting = false;
 
         player.Revive(); // enable player controller
+
+        timer = 0;
     }
 
     void CheckGainLives()
