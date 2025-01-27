@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerParticles : MonoBehaviour
 {
     public ParticleSystem BubblesParticleSystem;
-    [SerializeField] AudioSource audioSource;
+    public AudioSource audioSource;
 
     Player player;
 

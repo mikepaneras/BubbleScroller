@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public bool started;
+    public bool started = true;
 
     public Animator animator;
 

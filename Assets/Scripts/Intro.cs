@@ -17,12 +17,24 @@ public class Intro : MonoBehaviour
     public TextMeshProUGUI textoutro;
 
     public Player player;
+    public PlayerParticles particles;
 
     void Start()
     {
         image.gameObject.SetActive(true);
         FadeIN();
         Invoke("FadeOut", 6f);
+        Invoke("UnlockPlayer", 12f);
+    }
+
+    void UnlockPlayer()
+    {
+        player.started = true;
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        {
+            particles.audioSource.Play();
+            particles.BubblesParticleSystem.Play();
+        }
     }
 
     void FadeOut()
@@ -51,8 +63,6 @@ public class Intro : MonoBehaviour
             if(delay > 0) { delay -= Time.deltaTime; return; }
             image.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
             textMeshPro.color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
-
-            player.started = true;
         }
     }
 }
