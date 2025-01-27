@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     //Assign vars...
     public TextMeshProUGUI counterDistance;
-    public float counter = Mathf.NegativeInfinity;
+    public float counter = 0;
     public GameObject bubble;
 
     
@@ -26,7 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
         // Display the message on screen...
         counterDistance.text = $"Peak Journey:  { ((int)counter)}";
 
-        if (bubble.transform.position.y < 0)
+        if (counter < 0)
         {
             counterDistance.enabled = false;
         }

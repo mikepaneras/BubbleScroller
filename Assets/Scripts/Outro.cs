@@ -29,7 +29,7 @@ public class Outro : MonoBehaviour
         yield return StartCoroutine(FadeText(1f, 0f));
 
         // epic team credits
-        textMeshPro.text = "Developed by Bubble Trouble";
+        textMeshPro.text = "Developed by Bubble Trouble\r\n\r\nAnastasia Voukali\r\nIakovos Vlachos\r\nMike Paneras\r\nNestoras Angelopoulos\r\nTeresa Theodossiou\r\nThanos Thamnopoulos\r\nThodoris Chalvatzis\r\nVlasis Oikonomou\r\n";
 
         yield return new WaitForSeconds(1f);
 
