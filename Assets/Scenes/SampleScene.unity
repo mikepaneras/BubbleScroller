@@ -3869,14 +3869,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1484209143003337512, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2437744389447773316, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3d1a08741a5f8e74ab5b0a12a696a143, type: 2}
     - target: {fileID: 6428955827387853834, guid: 30de7c39805d20b47b54c2df744a55d7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4337,7 +4329,7 @@ MonoBehaviour:
   player: {fileID: 0}
   reset: 0
   offset: {x: 0, y: 3}
-  followSpeed: 1
+  followSpeed: 4
 --- !u!1 &833030614
 GameObject:
   m_ObjectHideFlags: 0

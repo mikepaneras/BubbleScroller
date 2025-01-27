@@ -28,11 +28,13 @@ public class FollowPlayer : MonoBehaviour
         }
         else if (reset)
         {
+            float resetSpeed = (Mathf.Clamp01(player.transform.position.y / 300) + 0.01f) * 100 * followSpeed * Time.deltaTime;
+
             // move camera to start
-            transform.position = Vector3.Lerp(transform.position, resetTarget.transform.position, followSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, resetTarget.transform.position, resetSpeed);
             
             // move player to center
-            player.transform.position = Vector3.Lerp(player.transform.position, Camera.main.transform.position + new Vector3(0, -2, 10), 5 * Time.deltaTime);
+            player.transform.position = Vector3.MoveTowards(player.transform.position, Camera.main.transform.position + new Vector3(0, -2, 10), resetSpeed);
 
             // stop the reset animation
             if (Vector3.Distance(transform.position, resetTarget.transform.position) < 0.5f) reset = false;

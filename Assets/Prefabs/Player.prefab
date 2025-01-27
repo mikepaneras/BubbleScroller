@@ -278,7 +278,7 @@ Animator:
   m_GameObject: {fileID: 5987298467621304792}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -1046244585702564560, guid: 30990173b3bf2db47900563b88a6d67e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3d1a08741a5f8e74ab5b0a12a696a143, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -345,6 +345,7 @@ MonoBehaviour:
   sesitivity: 2
   speed: 5
   invincibility: 1.5
+  animatorPlayer: {fileID: 0}
 --- !u!82 &349891439509253318
 AudioSource:
   m_ObjectHideFlags: 0

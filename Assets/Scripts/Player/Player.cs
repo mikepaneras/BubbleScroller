@@ -33,9 +33,10 @@ public class Player : MonoBehaviour
         if (!started) return;
 
         Rotate();
-        if (transform.position.y > -5) transform.position -= Vector3.up * Time.deltaTime;
 
         if (!isAlive) return;
+
+        if (transform.position.y > -5) transform.position -= Vector3.up * Time.deltaTime;
 
         // Move up.
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
@@ -110,7 +111,6 @@ public class Player : MonoBehaviour
         GetComponent<AudioSource>().Play();
         colliderPlayer.enabled = false;
         animator.SetTrigger("Death");
-        
     }
 
     public void Revive()
@@ -118,5 +118,6 @@ public class Player : MonoBehaviour
         isAlive = true;
         target = transform.position;
         colliderPlayer.enabled = true;
+        animator.SetTrigger("Reset");
     }
 }
