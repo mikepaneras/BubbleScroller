@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EyeEnemy : MonoBehaviour
 {
     [SerializeField] Collider2D areaOfEffect;
+    [SerializeField] Image laserImage;
     [SerializeField] Animator animator;
     [SerializeField] float holdTime = 1f;
     AudioSource audioSource;
@@ -17,10 +19,6 @@ public class EyeEnemy : MonoBehaviour
         audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.spatialBlend = 1;
         CheckEyeState();
-    }
-
-    private void Update()
-    {
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,8 +43,13 @@ public class EyeEnemy : MonoBehaviour
     public void EnableCollider()
     {
         audioSource.PlayOneShot(attackSound);
-        areaOfEffect.gameObject.SetActive(true);
+        areaOfEffect.enabled = true;
+        laserImage.enabled = true;
     }
-    public void DisableCollider() => areaOfEffect.gameObject.SetActive(false);
+    public void DisableCollider()
+    {
+        areaOfEffect.enabled = false;
+        laserImage.enabled = false;
+    }
     #endregion
 }
